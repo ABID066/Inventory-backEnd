@@ -19,7 +19,7 @@ const UserCreateService = async (req, DataModel) => {
 
         return { status: "success", message: "User registration successful" };
     } catch (err) {
-        return { status: "fail", message: err.toString() };
+        return { status: "fail", message: err};
     }
 };
 
