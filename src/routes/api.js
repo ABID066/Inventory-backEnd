@@ -20,7 +20,7 @@ const router = express.Router();
 router.post("/Registration", UsersController.Registration);
 router.post("/Login", UsersController.Login);
 router.post("/ProfileUpdate", AuthVerify, UsersController.ProfileUpdate);
-router.post("/ProfileDetails",AuthVerify, UsersController.ProfileDetails);
+router.get("/ProfileDetails",AuthVerify, UsersController.ProfileDetails);
 router.post("/RecoverVerifyEmail/:email", UsersController.RecoverVerifyEmail);
 router.post("/RecoverVerifyOTP/:email/:otp", UsersController.RecoverVerifyOTP);
 router.post("/RecoverResetPass", UsersController.RecoverResetPass);
